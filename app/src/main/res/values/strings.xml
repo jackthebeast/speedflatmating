@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SpeedFlatMating</string>
+
+    <string name="upcoming">Upcoming</string>
+    <string name="past">Past</string>
+
 </resources>
