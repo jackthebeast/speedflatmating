@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class Venue {
 
+    public static String datePattern = "yyyy-MM-dd HH:mm:ss";
+
     String imageUrl;
     String location;
     String venue;
