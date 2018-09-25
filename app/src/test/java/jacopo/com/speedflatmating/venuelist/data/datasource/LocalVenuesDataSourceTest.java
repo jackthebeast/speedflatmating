@@ -8,7 +8,6 @@ import org.mockito.Captor;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import java.util.Collection;
 import java.util.List;
 
 import jacopo.com.speedflatmating.global.data.OperationCallback;
@@ -23,7 +22,7 @@ public class LocalVenuesDataSourceTest {
     private OperationCallback callback;
 
     @Captor
-    private ArgumentCaptor<Collection<Venue>> captor;
+    private ArgumentCaptor<List<Venue>> captor;
 
     private LocalVenuesDataSource dataSource;
 
@@ -39,11 +38,9 @@ public class LocalVenuesDataSourceTest {
 
         verify(callback).onSuccess(captor.capture());
 
-        Collection<Venue> collection = captor.getValue();
+        List<Venue> list = captor.getValue();
 
-        Assert.assertEquals(eq(3), eq(collection.size()));
-
-        List<Venue> list = (List<Venue>) collection;
+        Assert.assertEquals(eq(3), eq(list.size()));
 
         Assert.assertEquals(eq("The Penny Farthing"), eq(list.get(0).getLocation()));
     }
@@ -54,11 +51,9 @@ public class LocalVenuesDataSourceTest {
 
         verify(callback).onSuccess(captor.capture());
 
-        Collection<Venue> collection = captor.getValue();
+        List<Venue> list = captor.getValue();
 
-        Assert.assertEquals(eq(2), eq(collection.size()));
-
-        List<Venue> list = (List<Venue>) collection;
+        Assert.assertEquals(eq(2), eq(list.size()));
 
         Assert.assertEquals(eq("The Dwarf"), eq(list.get(0).getLocation()));
     }

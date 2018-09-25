@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import jacopo.com.speedflatmating.global.data.OperationCallback;
@@ -24,7 +23,7 @@ public class LocalVenuesDataSource implements VenuesDataSource{
     }
 
     @Override
-    public void fetchUpcomingMeetings(OperationCallback<Collection<Venue>> callback) {
+    public void fetchUpcomingMeetings(OperationCallback<List<Venue>> callback) {
         String jsonString = DummyVenuesProvider.getUpcoming();
 
         Venue[] array = gson.fromJson(jsonString, Venue[].class);
@@ -35,7 +34,7 @@ public class LocalVenuesDataSource implements VenuesDataSource{
     }
 
     @Override
-    public void fetchPastMeetings(OperationCallback<Collection<Venue>> callback) {
+    public void fetchPastMeetings(OperationCallback<List<Venue>> callback) {
         String jsonString = DummyVenuesProvider.getPast();
 
         Venue[] array = gson.fromJson(jsonString, Venue[].class);
