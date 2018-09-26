@@ -2,12 +2,15 @@ package jacopo.com.speedflatmating.venuelist.view;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
+
+import jacopo.com.speedflatmating.model.Venue;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,12 +36,24 @@ public abstract class MeetingsFragment extends Fragment implements VenueListCont
         view = inflater.inflate(R.layout.fragment_meetings, container, false);
         ButterKnife.bind(this, view);
         presenter = new MeetingsPresenter(this, VenuesRepositoryImpl.getInstance(LocalVenuesDataSource.getInstance()));
+        initList();
         return view;
     }
 
     @Override
-    public void showItems(List<jacopo.com.speedflatmating.model.Venue> items) {
+    public void onStart (){
+        super.onStart();
+        presenter.loadItems();
+    }
+    private void initList() {
         adapter = new VenuesAdapter();
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity().getApplicationContext());
+        venueList.setLayoutManager(layoutManager);
+        venueList.setAdapter(adapter);
+    }
+
+    @Override
+    public void showItems(List<Venue> items) {
         adapter.setList(items);
     }
 }
