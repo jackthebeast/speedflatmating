@@ -9,6 +9,8 @@ public abstract class VenueListContract {
 
     public interface View {
         void showItems(List<Venue> items);
+
+        void onVenueClick(Venue venue);
     }
 
     public interface Presenter {

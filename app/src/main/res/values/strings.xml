@@ -3,5 +3,7 @@
 
     <string name="upcoming">Upcoming</string>
     <string name="past">Past</string>
+    <string name="permission_title">Permission needed</string>
+    <string name="permission_message">Please allow this app to make phone call on the next step</string>
 
 </resources>
