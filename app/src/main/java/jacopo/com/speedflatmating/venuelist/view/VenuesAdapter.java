@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.ArrayList;
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import jacopo.com.speedflatmating.R;
+import jacopo.com.speedflatmating.global.ApplicationConstants;
 import jacopo.com.speedflatmating.venuelist.model.Venue;
 
 public class VenuesAdapter extends RecyclerView.Adapter<VenuesAdapter.VenueViewHolder> {
@@ -48,6 +50,7 @@ public class VenuesAdapter extends RecyclerView.Adapter<VenuesAdapter.VenueViewH
     @Override
     public void onBindViewHolder(VenueViewHolder holder, int position){
         Venue venue = list.get(position);
+        Picasso.get().load(ApplicationConstants.ASSETS_FOLDER + venue.getImageUrl()).into(holder.photo);
         holder.location.setText(venue.getLocation());
         holder.price.setText(venue.getCost());
         holder.venue.setText(venue.getVenue());
