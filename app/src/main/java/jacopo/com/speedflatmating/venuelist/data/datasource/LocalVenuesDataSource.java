@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import jacopo.com.speedflatmating.global.data.OperationCallback;
-import jacopo.com.speedflatmating.model.Venue;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 
 public class LocalVenuesDataSource implements VenuesDataSource{
 

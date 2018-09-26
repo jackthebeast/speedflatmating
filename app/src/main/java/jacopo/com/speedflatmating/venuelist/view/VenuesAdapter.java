@@ -13,7 +13,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import jacopo.com.speedflatmating.R;
-import jacopo.com.speedflatmating.model.Venue;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 
 public class VenuesAdapter extends RecyclerView.Adapter<VenuesAdapter.VenueViewHolder> {
     private List<Venue> list;

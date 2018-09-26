@@ -1,12 +1,13 @@
 package jacopo.com.speedflatmating.venuelist.presenter;
 
+
 import java.util.List;
 
 import jacopo.com.speedflatmating.global.data.OperationCallback;
 import jacopo.com.speedflatmating.venuelist.VenueListContract;
 import jacopo.com.speedflatmating.venuelist.data.repository.VenuesRepository;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 import jacopo.com.speedflatmating.venuelist.view.MeetingsFragment;
-import jacopo.com.speedflatmating.model.Venue;
 import jacopo.com.speedflatmating.venuelist.view.PastFragment;
 import jacopo.com.speedflatmating.venuelist.view.UpcomingFragment;
 

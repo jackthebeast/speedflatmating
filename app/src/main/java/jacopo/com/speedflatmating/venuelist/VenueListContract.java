@@ -1,8 +1,9 @@
 package jacopo.com.speedflatmating.venuelist;
 
+
 import java.util.List;
 
-import jacopo.com.speedflatmating.model.Venue;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 
 public abstract class VenueListContract {
 

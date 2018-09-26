@@ -1,4 +1,4 @@
-package jacopo.com.speedflatmating.model;
+package jacopo.com.speedflatmating.venuelist.model;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

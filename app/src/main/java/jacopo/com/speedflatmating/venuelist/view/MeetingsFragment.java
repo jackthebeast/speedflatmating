@@ -8,9 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
 
-import jacopo.com.speedflatmating.model.Venue;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,6 +17,7 @@ import jacopo.com.speedflatmating.R;
 import jacopo.com.speedflatmating.venuelist.VenueListContract;
 import jacopo.com.speedflatmating.venuelist.data.datasource.LocalVenuesDataSource;
 import jacopo.com.speedflatmating.venuelist.data.repository.VenuesRepositoryImpl;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 import jacopo.com.speedflatmating.venuelist.presenter.MeetingsPresenter;
 
 public abstract class MeetingsFragment extends Fragment implements VenueListContract.View {

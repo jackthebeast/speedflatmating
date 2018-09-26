@@ -1,10 +1,11 @@
 package jacopo.com.speedflatmating.venuelist.data.repository;
 
+
 import java.util.List;
 
 import jacopo.com.speedflatmating.global.data.OperationCallback;
 import jacopo.com.speedflatmating.venuelist.data.datasource.LocalVenuesDataSource;
-import jacopo.com.speedflatmating.model.Venue;
+import jacopo.com.speedflatmating.venuelist.model.Venue;
 
 public class VenuesRepositoryImpl implements VenuesRepository{
 
