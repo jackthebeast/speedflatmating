@@ -1,10 +1,13 @@
 package jacopo.com.speedflatmating.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Venue {
 
     public static String datePattern = "yyyy-MM-dd HH:mm:ss";
+    public static String timePattern = "HH:mm";
+    public static String startDatePattern = "dd MMM";
 
     String imageUrl;
     String location;
@@ -61,6 +64,20 @@ public class Venue {
         this.cost = cost;
     }
 
+    public String getFormattedTimeSpan(){
+        String timeSpan = "";
+        SimpleDateFormat format = new SimpleDateFormat(timePattern);
+        timeSpan += format.format(getStartTime());
+        timeSpan += " - ";
+        timeSpan += format.format(getEndTime());
+        return timeSpan;
+    }
+
+    public String getFormattedStartDate(){
+        SimpleDateFormat format = new SimpleDateFormat(startDatePattern);
+        String formatted = format.format(getStartTime());
+        return formatted;
+    }
     //    {
 //        "imageUrl": "imageUrl",
 //            "location": "The Penny Farthing",
