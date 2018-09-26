@@ -51,6 +51,8 @@ public class VenuesAdapter extends RecyclerView.Adapter<VenuesAdapter.VenueViewH
         holder.location.setText(venue.getLocation());
         holder.price.setText(venue.getCost());
         holder.venue.setText(venue.getVenue());
+        holder.day.setText(venue.getFormattedStartDate());
+        holder.time.setText(venue.getFormattedTimeSpan());
     }
 
     @Override
