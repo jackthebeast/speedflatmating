@@ -3,11 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginHorizontal="@dimen/venue_item_margin"
     android:layout_marginTop="@dimen/venue_item_margin">
 
     <ImageView
+        android:src="@drawable/dwarf"
         android:id="@+id/venue_item_photo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -19,8 +20,12 @@
         android:layout_marginStart="@dimen/venue_item_spacing"
         android:layout_marginTop="@dimen/venue_item_spacing"
         android:hint="free"
+        android:textAllCaps="true"
         app:layout_constraintStart_toStartOf="@id/venue_item_photo"
-        app:layout_constraintTop_toTopOf="@id/venue_item_photo" />
+        app:layout_constraintTop_toTopOf="@id/venue_item_photo"
+        android:padding="@dimen/venue_item_spacing"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/venue_item_venue"
@@ -29,8 +34,10 @@
         android:layout_marginStart="@dimen/venue_item_spacing"
         android:layout_marginBottom="@dimen/venue_item_spacing"
         android:hint="a venue"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/venue_item_location"
-        app:layout_constraintStart_toStartOf="@id/venue_item_photo" />
+        app:layout_constraintStart_toStartOf="@id/venue_item_photo"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/venue_item_location"
@@ -40,7 +47,8 @@
         android:layout_marginBottom="@dimen/venue_item_spacing"
         android:hint="a place"
         app:layout_constraintBottom_toBottomOf="@id/venue_item_photo"
-        app:layout_constraintStart_toStartOf="@id/venue_item_photo" />
+        app:layout_constraintStart_toStartOf="@id/venue_item_photo"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/venue_item_day"
@@ -49,8 +57,10 @@
         android:layout_marginEnd="@dimen/venue_item_spacing"
         android:layout_marginBottom="@dimen/venue_item_spacing"
         android:hint="20/09/2018"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/venue_item_time"
-        app:layout_constraintEnd_toEndOf="@id/venue_item_photo" />
+        app:layout_constraintEnd_toEndOf="@id/venue_item_photo"
+        android:textColor="@android:color/white"/>
 
     <TextView
         android:id="@+id/venue_item_time"
@@ -60,6 +70,7 @@
         android:layout_marginBottom="@dimen/venue_item_spacing"
         android:hint="09:00 - 11:00"
         app:layout_constraintBottom_toBottomOf="@id/venue_item_photo"
-        app:layout_constraintEnd_toEndOf="@id/venue_item_photo" />
+        app:layout_constraintEnd_toEndOf="@id/venue_item_photo"
+        android:textColor="@android:color/white"/>
 
 </android.support.constraint.ConstraintLayout>
